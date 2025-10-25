@@ -1,0 +1,689 @@
+Nextjs
+├── app
+│   ├── (auth)
+│   │   ├── HandleAuthChildren.jsx
+│   │   ├── _components
+│   │   │   └── AccountFooter.jsx
+│   │   ├── layout.jsx
+│   │   ├── loading.jsx
+│   │   ├── login
+│   │   │   ├── _components
+│   │   │   │   ├── LoginForm.jsx
+│   │   │   │   └── LoginPage.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── useLoginHandler.js
+│   │   │   └── page.jsx
+│   │   ├── password-reset
+│   │   │   ├── _components
+│   │   │   │   └── ResetForm.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── usePasswordReset.js
+│   │   │   └── page.jsx
+│   │   ├── password-reset-request
+│   │   │   ├── _components
+│   │   │   │   └── ResetRequestForm.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── usePasswordResetRequestHandler.js
+│   │   │   └── page.jsx
+│   │   ├── register
+│   │   │   ├── _components
+│   │   │   │   ├── AgreePolicy.jsx
+│   │   │   │   ├── RegistrationDisabled.jsx
+│   │   │   │   ├── RegistrationForm.jsx
+│   │   │   │   └── RegistrationHandle.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── useRegister.js
+│   │   │   └── page.jsx
+│   │   ├── reset-request-verify
+│   │   │   ├── _components
+│   │   │   │   └── ResetRequestVerify.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── useResetVerification.js
+│   │   │   └── page.jsx
+│   │   └── validate
+│   │       ├── _components
+│   │       │   └── ValidateNextAuth.jsx
+│   │       └── page.jsx
+│   ├── (authorized)
+│   │   ├── HandleAppChildren.jsx
+│   │   ├── [page_slug]
+│   │   │   ├── _hooks
+│   │   │   │   └── useCustomPage.js
+│   │   │   └── page.jsx
+│   │   ├── authorization
+│   │   │   ├── _components
+│   │   │   │   ├── AuthorizationHandler.jsx
+│   │   │   │   ├── Banned.jsx
+│   │   │   │   ├── EmailVerification.jsx
+│   │   │   │   ├── MobileVerification.jsx
+│   │   │   │   └── TwoFaVerification.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── useVerificationCode.js
+│   │   │   └── page.jsx
+│   │   ├── bookmarks
+│   │   │   ├── _components
+│   │   │   │   ├── BookmarkCollection.jsx
+│   │   │   │   └── BookmarkPage.jsx
+│   │   │   └── page.jsx
+│   │   ├── collections
+│   │   │   ├── _components
+│   │   │   │   ├── CollectionData.jsx
+│   │   │   │   ├── CollectionFilter.jsx
+│   │   │   │   ├── CollectionHeader.jsx
+│   │   │   │   ├── CollectionListItem.jsx
+│   │   │   │   ├── CollectionPage.jsx
+│   │   │   │   ├── CollectionPageHeader.jsx
+│   │   │   │   ├── CollectionPosts.jsx
+│   │   │   │   ├── CollectionTopNav.jsx
+│   │   │   │   ├── CollectionUsers.jsx
+│   │   │   │   ├── HandelCollection.jsx
+│   │   │   │   └── UserCard.jsx
+│   │   │   ├── _hooks
+│   │   │   │   ├── useCollectionUser.js
+│   │   │   │   └── useCollections.js
+│   │   │   ├── followers
+│   │   │   │   ├── _components
+│   │   │   │   │   └── FollowersPage.jsx
+│   │   │   │   └── page.jsx
+│   │   │   ├── following
+│   │   │   │   ├── _components
+│   │   │   │   │   └── FollowingPage.jsx
+│   │   │   │   └── page.jsx
+│   │   │   ├── layout.jsx
+│   │   │   ├── page.jsx
+│   │   │   └── subscriptions
+│   │   │       ├── _components
+│   │   │       │   └── SubscriptionsPage.jsx
+│   │   │       └── page.jsx
+│   │   ├── contact
+│   │   │   ├── _components
+│   │   │   │   ├── ContactForm.jsx
+│   │   │   │   └── ContactFormWrapper.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── useContact.js
+│   │   │   └── page.jsx
+│   │   ├── create-post
+│   │   │   ├── _components
+│   │   │   │   ├── AddMoreButton.jsx
+│   │   │   │   ├── CharityCollection.jsx
+│   │   │   │   ├── ComposePost.jsx
+│   │   │   │   ├── CreatePostDonation.jsx
+│   │   │   │   ├── CreatePostImage.jsx
+│   │   │   │   ├── CreatePostPage.jsx
+│   │   │   │   ├── CreatePostPoll.jsx
+│   │   │   │   ├── CreatePostQuiz.jsx
+│   │   │   │   ├── Editor.jsx
+│   │   │   │   ├── ImageThumbnail.jsx
+│   │   │   │   ├── PageHeader.jsx
+│   │   │   │   ├── PostPoll.jsx
+│   │   │   │   ├── PostQuiz.jsx
+│   │   │   │   ├── PostThumb.jsx
+│   │   │   │   ├── PremiumPost.jsx
+│   │   │   │   ├── RenderImages.jsx
+│   │   │   │   ├── TextEditor.jsx
+│   │   │   │   ├── TimePicker.jsx
+│   │   │   │   └── ViewAllImages.jsx
+│   │   │   ├── _hooks
+│   │   │   │   ├── useCreatingCharity.js
+│   │   │   │   ├── useDragging.js
+│   │   │   │   ├── usePostTimePicker.js
+│   │   │   │   └── useSubmitPost.js
+│   │   │   └── page.jsx
+│   │   ├── edit-post
+│   │   │   └── [postID]
+│   │   │       ├── _components
+│   │   │       │   └── EditPostPage.jsx
+│   │   │       ├── _hooks
+│   │   │       │   └── useUpdatePost.js
+│   │   │       └── page.jsx
+│   │   ├── layout.jsx
+│   │   ├── messages
+│   │   │   ├── [message]
+│   │   │   │   ├── _components
+│   │   │   │   │   ├── MessageAction.jsx
+│   │   │   │   │   ├── MessageBody.jsx
+│   │   │   │   │   ├── MessageDetailsHeader.jsx
+│   │   │   │   │   ├── MessageDetailsHeaderSkeleton.jsx
+│   │   │   │   │   ├── MessageDetailsPage.jsx
+│   │   │   │   │   └── WriteMessage.jsx
+│   │   │   │   ├── _hooks
+│   │   │   │   └── page.jsx
+│   │   │   ├── _components
+│   │   │   │   ├── Conversation.jsx
+│   │   │   │   ├── Conversations.jsx
+│   │   │   │   ├── MessageHeader.jsx
+│   │   │   │   └── MessagePage.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── useMessageConnect.js
+│   │   │   ├── layout.jsx
+│   │   │   ├── new
+│   │   │   │   └── page.jsx
+│   │   │   └── page.jsx
+│   │   ├── notifications
+│   │   │   ├── [filter]
+│   │   │   │   ├── error.jsx
+│   │   │   │   └── page.jsx
+│   │   │   ├── _components
+│   │   │   │   ├── NotificationFilter.jsx
+│   │   │   │   ├── NotificationHead.jsx
+│   │   │   │   ├── NotificationPage.jsx
+│   │   │   │   ├── NotificationUser.jsx
+│   │   │   │   └── SingleNotification.jsx
+│   │   │   ├── _hooks
+│   │   │   │   ├── useNotification.js
+│   │   │   │   └── useReadNotification.js
+│   │   │   ├── layout.jsx
+│   │   │   └── page.jsx
+│   │   ├── page.jsx
+│   │   ├── post
+│   │   │   └── [details]
+│   │   │       ├── _components
+│   │   │       │   └── PostDetailsPage.jsx
+│   │   │       ├── _hooks
+│   │   │       │   └── usePostDetails.js
+│   │   │       └── page.jsx
+│   │   ├── profile
+│   │   │   └── [username]
+│   │   │       ├── _components
+│   │   │       │   ├── NoUserPlaceHolder.jsx
+│   │   │       │   ├── ProfileFollow.jsx
+│   │   │       │   ├── ProfileInfo.jsx
+│   │   │       │   ├── ProfileMediaTab.jsx
+│   │   │       │   ├── ProfilePage.jsx
+│   │   │       │   ├── ProfilePostTab.jsx
+│   │   │       │   ├── ProfileRightSidebar.jsx
+│   │   │       │   ├── RecentMedia.jsx
+│   │   │       │   ├── SubscriptionType.jsx
+│   │   │       │   └── error.jsx
+│   │   │       ├── _hooks
+│   │   │       │   ├── useProfileData.js
+│   │   │       │   └── useProfileFollow.js
+│   │   │       └── page.jsx
+│   │   ├── profile-data
+│   │   │   ├── _components
+│   │   │   │   ├── ProfileForm.jsx
+│   │   │   │   └── ProfileHeader.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── useProfileHandler.js
+│   │   │   └── page.jsx
+│   │   ├── search
+│   │   │   └── [keyword]
+│   │   │       ├── _components
+│   │   │       │   └── SearchPage.jsx
+│   │   │       └── page.jsx
+│   │   ├── setting
+│   │   │   ├── _components
+│   │   │   │   ├── ProfileImageSettings.jsx
+│   │   │   │   ├── SettingPageHeader.jsx
+│   │   │   │   ├── SettingsGroup.jsx
+│   │   │   │   ├── SettingsLoader.jsx
+│   │   │   │   ├── SettingsMenu.jsx
+│   │   │   │   ├── SettingsPage.jsx
+│   │   │   │   ├── SettingsPageBody.jsx
+│   │   │   │   └── SettingsSwitchField.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── useUpdateProfile.js
+│   │   │   ├── account
+│   │   │   │   ├── 2fa
+│   │   │   │   │   ├── _components
+│   │   │   │   │   │   ├── TwoFaContent.jsx
+│   │   │   │   │   │   ├── TwoFaControl.jsx
+│   │   │   │   │   │   ├── TwoFaQR.jsx
+│   │   │   │   │   │   └── TwoFaSettingsPage.jsx
+│   │   │   │   │   ├── _hooks
+│   │   │   │   │   │   ├── useTwoFaControl.js
+│   │   │   │   │   │   └── useTwoFaHandler.js
+│   │   │   │   │   └── page.jsx
+│   │   │   │   ├── badge
+│   │   │   │   │   ├── _components
+│   │   │   │   │   │   ├── BadgePurchase.jsx
+│   │   │   │   │   │   └── BadgePurchaseForm.jsx
+│   │   │   │   │   ├── _hooks
+│   │   │   │   │   │   └── useBadgeVerification.js
+│   │   │   │   │   └── page.jsx
+│   │   │   │   ├── delete
+│   │   │   │   │   ├── _components
+│   │   │   │   │   │   └── DeleteAccountPage.jsx
+│   │   │   │   │   ├── _hooks
+│   │   │   │   │   │   └── useDeleteAccount.js
+│   │   │   │   │   └── page.jsx
+│   │   │   │   ├── page.jsx
+│   │   │   │   ├── password
+│   │   │   │   │   ├── _components
+│   │   │   │   │   │   └── HandelPasswordChange.jsx
+│   │   │   │   │   ├── _hooks
+│   │   │   │   │   │   └── useChangePassword.js
+│   │   │   │   │   └── page.jsx
+│   │   │   │   ├── sessions
+│   │   │   │   │   ├── _components
+│   │   │   │   │   │   └── SessionsPage.jsx
+│   │   │   │   │   └── page.jsx
+│   │   │   │   └── social
+│   │   │   │       ├── _components
+│   │   │   │       │   └── SocialAccountPage.jsx
+│   │   │   │       ├── _hooks
+│   │   │   │       │   └── useSocialMediaUpdate.js
+│   │   │   │       └── page.jsx
+│   │   │   ├── archive
+│   │   │   │   ├── _components
+│   │   │   │   │   └── ArchivePostPage.jsx
+│   │   │   │   └── page.jsx
+│   │   │   ├── language
+│   │   │   │   ├── _components
+│   │   │   │   │   └── HandleDisplay.jsx
+│   │   │   │   └── page.jsx
+│   │   │   ├── layout.jsx
+│   │   │   ├── loading.jsx
+│   │   │   ├── notifications
+│   │   │   │   ├── _components
+│   │   │   │   │   └── HandelNotifications.jsx
+│   │   │   │   ├── _hooks
+│   │   │   │   │   └── useNotificationSettings.js
+│   │   │   │   └── page.jsx
+│   │   │   ├── page.jsx
+│   │   │   ├── profile
+│   │   │   │   ├── _components
+│   │   │   │   │   └── ProfileSetting.jsx
+│   │   │   │   └── page.jsx
+│   │   │   └── subscription
+│   │   │       ├── _components
+│   │   │       │   └── SetSubscriptionPage.jsx
+│   │   │       ├── _hooks
+│   │   │       │   └── useSubscriptionConfig.js
+│   │   │       └── page.jsx
+│   │   ├── support
+│   │   │   ├── [ticket]
+│   │   │   │   ├── _components
+│   │   │   │   │   ├── Header.jsx
+│   │   │   │   │   ├── ReplyForm.jsx
+│   │   │   │   │   ├── ReplyList.jsx
+│   │   │   │   │   ├── ViewTicket.jsx
+│   │   │   │   │   └── skeletons
+│   │   │   │   │       ├── HeaderSkeleton.jsx
+│   │   │   │   │       └── HeaderSkeleton.module.css
+│   │   │   │   └── page.jsx
+│   │   │   ├── _components
+│   │   │   │   ├── Search.jsx
+│   │   │   │   ├── TicketPriority.jsx
+│   │   │   │   ├── TicketStatus.jsx
+│   │   │   │   └── Tickets.jsx
+│   │   │   ├── _hooks
+│   │   │   │   └── useTickets.js
+│   │   │   ├── create
+│   │   │   │   ├── _components
+│   │   │   │   │   ├── HandleAttachments.jsx
+│   │   │   │   │   └── NewTicketForm.jsx
+│   │   │   │   └── page.jsx
+│   │   │   └── page.jsx
+│   │   ├── ticket
+│   │   │   └── [ticket]
+│   │   │       ├── _components
+│   │   │       │   └── Viewticket.jsx
+│   │   │       └── page.jsx
+│   │   ├── transactions
+│   │   │   ├── _components
+│   │   │   │   ├── TableFilter.jsx
+│   │   │   │   └── TransactionsPage.jsx
+│   │   │   ├── _hooks
+│   │   │   │   ├── useDepositCalculation.js
+│   │   │   │   ├── usePaymentMethod.js
+│   │   │   │   └── useTransaction.js
+│   │   │   ├── confirmation
+│   │   │   │   ├── _components
+│   │   │   │   │   ├── Authorize.jsx
+│   │   │   │   │   ├── Checkout.jsx
+│   │   │   │   │   ├── ConfiramationPage.jsx
+│   │   │   │   │   ├── ConfirmationCard.jsx
+│   │   │   │   │   ├── Flutterwave.jsx
+│   │   │   │   │   ├── Manual.jsx
+│   │   │   │   │   ├── NMI.jsx
+│   │   │   │   │   ├── Paystack.jsx
+│   │   │   │   │   ├── Razorpay.jsx
+│   │   │   │   │   ├── Redirect.jsx
+│   │   │   │   │   ├── Stripe.jsx
+│   │   │   │   │   ├── StripeJs.jsx
+│   │   │   │   │   └── StripeV3.jsx
+│   │   │   │   ├── _hooks
+│   │   │   │   │   ├── useCardPayment.js
+│   │   │   │   │   ├── useManualConfirmation.js
+│   │   │   │   │   └── usePaymentConfirmation.js
+│   │   │   │   └── page.jsx
+│   │   │   ├── page.jsx
+│   │   │   └── useTransaction.js
+│   │   ├── user
+│   │   │   └── kyc-verification
+│   │   │       ├── _components
+│   │   │       │   └── KYCForm.jsx
+│   │   │       ├── _hooks
+│   │   │       │   └── useKYC.js
+│   │   │       ├── data
+│   │   │       │   ├── _components
+│   │   │       │   │   └── KYCData.jsx
+│   │   │       │   ├── _hooks
+│   │   │       │   │   └── useKYCDetails.js
+│   │   │       │   └── page.jsx
+│   │   │       └── page.jsx
+│   │   └── wallet
+│   │       ├── _components
+│   │       │   ├── DepositTab.jsx
+│   │       │   ├── DepositTable.jsx
+│   │       │   ├── HandelWalletPage.jsx
+│   │       │   ├── RecentEarning.jsx
+│   │       │   ├── TransactionForm.jsx
+│   │       │   ├── TransactionTable.jsx
+│   │       │   ├── WithdrawCalculation.jsx
+│   │       │   ├── WithdrawMethods.jsx
+│   │       │   ├── WithdrawTab.jsx
+│   │       │   └── WithdrawalTable.jsx
+│   │       ├── _hooks
+│   │       │   ├── useEarning.js
+│   │       │   ├── useWithdrawCalculation.js
+│   │       │   ├── useWithdrawal.js
+│   │       │   └── useWithdrawalMethod.js
+│   │       ├── page.jsx
+│   │       └── withdraw-confirmation
+│   │           ├── _components
+│   │           │   ├── ConfirmationCard.jsx
+│   │           │   └── WithdrawConfirmPage.jsx
+│   │           ├── _hooks
+│   │           │   └── useWithdrawalConfirmation.js
+│   │           └── page.jsx
+│   ├── (policy)
+│   │   ├── cookie-policy
+│   │   │   ├── _components
+│   │   │   │   └── CookieContent.jsx
+│   │   │   └── page.jsx
+│   │   ├── layout.jsx
+│   │   └── policy
+│   │       └── [slug]
+│   │           ├── _components
+│   │           │   └── PolicyContent.jsx
+│   │           └── page.jsx
+│   ├── HandleChildren.jsx
+│   ├── SocketProvider.jsx
+│   ├── Wrapper.jsx
+│   ├── _badges
+│   │   ├── Badge.jsx
+│   │   └── GlobalBadge.jsx
+│   ├── _components
+│   │   ├── CommentItem.jsx
+│   │   ├── IndexPage.jsx
+│   │   ├── LoadMore.jsx
+│   │   ├── LoadMorePost.jsx
+│   │   ├── LockItem.jsx
+│   │   ├── Notify.jsx
+│   │   ├── PageHead.jsx
+│   │   ├── PageNotFound.jsx
+│   │   ├── PasswordField.jsx
+│   │   ├── PostAuthor.jsx
+│   │   ├── PostBody.jsx
+│   │   ├── PostCharity.jsx
+│   │   ├── PostComment.jsx
+│   │   ├── PostFilter.jsx
+│   │   ├── PostFooter.jsx
+│   │   ├── PostHeader.jsx
+│   │   ├── PostItem.jsx
+│   │   ├── PostMedia.jsx
+│   │   ├── PostOptions.jsx
+│   │   ├── PostPoll.jsx
+│   │   ├── PostQuiz.jsx
+│   │   ├── PostReaction.jsx
+│   │   ├── PostReport.jsx
+│   │   ├── SubscriptionButton.jsx
+│   │   └── _hook
+│   │       ├── useBookmark.js
+│   │       ├── useComment.js
+│   │       ├── useDebounce.js
+│   │       ├── useHandelOptions.js
+│   │       ├── usePollSubmit.js
+│   │       ├── usePostFooter.js
+│   │       ├── usePostTransaction.js
+│   │       ├── usePurchasePost.js
+│   │       ├── useQuizSubmit.js
+│   │       └── useReaction.js
+│   ├── _forms
+│   │   ├── FormField.jsx
+│   │   ├── FormGroup.jsx
+│   │   ├── FormLabel.jsx
+│   │   ├── FormsStore.jsx
+│   │   ├── Input.jsx
+│   │   ├── PasswordField.jsx
+│   │   └── Select.jsx
+│   ├── _hooks
+│   │   ├── useFcm.js
+│   │   ├── useLanguage.js
+│   │   ├── usePaginationParams.js
+│   │   ├── useReferral.js
+│   │   ├── useResource.js
+│   │   ├── useSearch.js
+│   │   └── useUtility.js
+│   ├── _icon
+│   │   ├── CharityIcon.jsx
+│   │   ├── EmojiIcon.jsx
+│   │   ├── EmptyTable.jsx
+│   │   ├── FbIcon.jsx
+│   │   ├── FilterIcon.jsx
+│   │   ├── ImageIcon.jsx
+│   │   ├── InstagramIcon.jsx
+│   │   ├── LockIcon.jsx
+│   │   ├── PollIcon.jsx
+│   │   ├── QuizIcon.jsx
+│   │   ├── SnapchatIcon.jsx
+│   │   ├── TiktokIcon.jsx
+│   │   └── XIcon.jsx
+│   ├── _partials
+│   │   ├── Button.jsx
+│   │   ├── Captcha.jsx
+│   │   ├── CodeVerification.jsx
+│   │   ├── Cookie.jsx
+│   │   ├── CustomColor.jsx
+│   │   ├── DesktopMenuList.jsx
+│   │   ├── Dropdown.jsx
+│   │   ├── FacebookComment.jsx
+│   │   ├── FormBuilder.jsx
+│   │   ├── GoogleAnalytics.jsx
+│   │   ├── HandleChildren.jsx
+│   │   ├── InlineSearch.jsx
+│   │   ├── LangControl.jsx
+│   │   ├── LeftSidebar.jsx
+│   │   ├── LoadGlobalData.js
+│   │   ├── MenuLi.jsx
+│   │   ├── MobileMenuList.jsx
+│   │   ├── Overlay.jsx
+│   │   ├── PageContent.jsx
+│   │   ├── Pagination.jsx
+│   │   ├── Placeholders.jsx
+│   │   ├── PolicyList.jsx
+│   │   ├── PostSearch.jsx
+│   │   ├── PreLoader.jsx
+│   │   ├── PushNotification.jsx
+│   │   ├── ReferralSystem.jsx
+│   │   ├── RightSidebar.jsx
+│   │   ├── SecurePassword.jsx
+│   │   ├── SetCustomPages.js
+│   │   ├── SetLanguage.js
+│   │   ├── SocialLogin.jsx
+│   │   ├── Spinner.jsx
+│   │   ├── SubmitBtn.jsx
+│   │   ├── TabHeader.jsx
+│   │   ├── TableContentLoader.jsx
+│   │   ├── Tawk.jsx
+│   │   ├── TopLoader.jsx
+│   │   ├── Topbar.jsx
+│   │   ├── UserBadge.jsx
+│   │   ├── _captcha
+│   │   │   ├── CustomCaptcha.jsx
+│   │   │   └── GoogleCaptcha.jsx
+│   │   ├── _components
+│   │   │   ├── EmptyContent.jsx
+│   │   │   ├── HandelPost.jsx
+│   │   │   ├── LeftSidebarIcon.jsx
+│   │   │   ├── MainHeader.jsx
+│   │   │   ├── PaymentPopup.jsx
+│   │   │   ├── PaymentSelect.jsx
+│   │   │   ├── SidebarSuggestion.jsx
+│   │   │   ├── SuggestionProfileCard.jsx
+│   │   │   ├── TabHeader.jsx
+│   │   │   ├── UserStatusBadge.jsx
+│   │   │   └── VideoPlayer.jsx
+│   │   ├── _hooks
+│   │   │   ├── useCookie.js
+│   │   │   ├── useFetchData.js
+│   │   │   ├── usePolicyPages.js
+│   │   │   └── useResponsive.js
+│   │   ├── _navbar
+│   │   │   ├── Logo.jsx
+│   │   │   └── Navbar.jsx
+│   │   ├── _sections
+│   │   │   ├── SidebarModal.jsx
+│   │   │   └── _hooks
+│   │   │       └── useSection.js
+│   │   ├── _skeletons
+│   │   │   ├── ButtonSkeleton.jsx
+│   │   │   ├── CardSkeletion.jsx
+│   │   │   ├── CommentSkeleton.jsx
+│   │   │   ├── ImageSkeleton.jsx
+│   │   │   ├── PolicyPageSkeleton.jsx
+│   │   │   ├── PostSkeleton.jsx
+│   │   │   ├── ProfileCardSkeleton.jsx
+│   │   │   ├── ProfileSkeletons.jsx
+│   │   │   ├── TextSkeleton.jsx
+│   │   │   └── UserCardSkeleton.jsx
+│   │   └── _table
+│   │       ├── EmptyResource.jsx
+│   │       ├── Table.jsx
+│   │       ├── TableBody.jsx
+│   │       ├── TableHeader.jsx
+│   │       └── index.js
+│   ├── api
+│   │   ├── auth
+│   │   │   └── [...nextauth]
+│   │   │       └── route.js
+│   │   └── token
+│   │       └── route.js
+│   ├── icon.js
+│   ├── layout.jsx
+│   ├── loading.jsx
+│   ├── maintenance-mode
+│   │   ├── _components
+│   │   │   └── MaintenanceMode.jsx
+│   │   └── page.jsx
+│   └── not-found.jsx
+├── eslint.config.mjs
+├── firebase.js
+├── jsconfig.json
+├── lib
+│   ├── endpoints.js
+│   ├── firebase.js
+│   ├── firebaseConfig.js
+│   ├── helpers.js
+│   └── postHelper.js
+├── middleware.js
+├── next.config.mjs
+├── package.json
+├── public
+│   ├── css
+│   │   ├── cookie.css
+│   │   ├── emoji.css
+│   │   ├── fontawesome.min.css
+│   │   ├── global.css
+│   │   ├── line-awesome.min.css
+│   │   ├── main.css
+│   │   ├── payment-card.css
+│   │   ├── secure-password.css
+│   │   ├── swiper.css
+│   │   └── verification-code.css
+│   ├── firebase-messaging-sw.js
+│   ├── fonts
+│   │   ├── la-brands-400.eot
+│   │   ├── la-brands-400.svg
+│   │   ├── la-brands-400.ttf
+│   │   ├── la-brands-400.woff
+│   │   ├── la-brands-400.woff2
+│   │   ├── la-regular-400.eot
+│   │   ├── la-regular-400.svg
+│   │   ├── la-regular-400.ttf
+│   │   ├── la-regular-400.woff
+│   │   ├── la-regular-400.woff2
+│   │   ├── la-solid-900.eot
+│   │   ├── la-solid-900.svg
+│   │   ├── la-solid-900.ttf
+│   │   ├── la-solid-900.woff
+│   │   └── la-solid-900.woff2
+│   ├── images
+│   │   ├── 404.png
+│   │   ├── facebook.svg
+│   │   ├── flag
+│   │   │   ├── ar.png
+│   │   │   ├── bn.png
+│   │   │   ├── de.png
+│   │   │   ├── english.png
+│   │   │   ├── esp.png
+│   │   │   ├── fr.png
+│   │   │   ├── it.png
+│   │   │   ├── pg.png
+│   │   │   └── rom.png
+│   │   ├── google.svg
+│   │   ├── linkedin.svg
+│   │   ├── logo
+│   │   │   ├── b-logo.png
+│   │   │   ├── favicon.png
+│   │   │   └── w-logo.png
+│   │   ├── register-disable.png
+│   │   └── thumbs
+│   │       ├── author.png
+│   │       ├── banned-user.png
+│   │       ├── collections-empty.png
+│   │       ├── cookies-thumb.png
+│   │       ├── f-1.jpg
+│   │       ├── f-2.jpg
+│   │       ├── f-3.jpg
+│   │       ├── f1.png
+│   │       ├── hero-placeholder-sm.png
+│   │       ├── hero-placeholder.png
+│   │       ├── instagram.png
+│   │       ├── login-shape.png
+│   │       ├── master-card.png
+│   │       ├── mastercard.png
+│   │       ├── paymen-logo.png
+│   │       ├── unlock-shape.png
+│   │       ├── user-placeholder.png
+│   │       └── video-thumb.png
+│   ├── js
+│   │   └── card.min.js
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── webfonts
+│       ├── fa-brands-400.ttf
+│       ├── fa-brands-400.woff2
+│       ├── fa-regular-400.ttf
+│       ├── fa-regular-400.woff2
+│       ├── fa-solid-900.ttf
+│       ├── fa-solid-900.woff2
+│       ├── fa-v4compatibility.ttf
+│       └── fa-v4compatibility.woff2
+├── server.js
+├── socket-server
+│   ├── app.js
+│   └── package.json
+└── store
+    ├── captchaSlice.js
+    ├── composePostSlice.js
+    ├── customPageSlice.js
+    ├── extensionSlice.js
+    ├── gsSlice.js
+    ├── hooks.js
+    ├── index.js
+    ├── langSlice.js
+    ├── notificationSlice.js
+    ├── paymentMethodSlice.js
+    ├── postsSlice.js
+    ├── selectors.js
+    ├── socketSlice.js
+    ├── suggestionsSlice.js
+    ├── uiSlice.js
+    ├── userConversationSlice.js
+    ├── userProfile.js
+    └── userSlice.js
+
+174 directories, 512 files
