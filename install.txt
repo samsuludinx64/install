@@ -1,0 +1,390 @@
+
+Technology Stack
+We have used modern technology stack for modern user experience with Single Page Application.
+
+
+Backend Technologies
+Laravel: A robust PHP framework designed for the development of scalable web applications, featuring built-in tools for routing, authentication, and database management.
+
+PHP: A widely-used server-side scripting language that powers dynamic content generation and seamless database integration for web applications.
+
+MySQL: A high-performance, open-source relational database management system, ideal for managing structured data in web-based environments.
+
+Frontend Technologies
+React: A JavaScript library for building dynamic and responsive user interfaces through reusable components and an optimized virtual DOM.
+
+NextJS: A React-based framework that enables server-side rendering and static site generation for improved performance and SEO optimization.
+
+Socket.IO: A real-time communication library that enables bidirectional event-based communication between web clients and servers, ensuring low-latency interactions.
+
+On this page
+
+Backend Technology
+Frontend Technology
+Server Requirements
+To run FansLab - Subscription Based Social Media Platform smoothly, ensure that your server meets the following minimum requirements:
+
+Server Configuration
+Web Server:: Apache or Nginix
+PHP Version: PHP 8.3 or higher
+Database: MySQL 8.0+ or MariaDB 10.6+
+Memory Limit: Minimum 512MB (Recommended: 1GB or higher)
+Disk Space: At least 1GB free storage (More required based on product uploads)
+PHP and Server Extension
+BCMath PHP Extension
+Ctype PHP Extension
+cURL PHP Extension
+DOM PHP Extension
+Fileinfo PHP Extension
+GD PHP Extension
+JSON PHP Extension
+Mbstring PHP Extension
+OpenSSL PHP Extension
+PCRE PHP Extension
+PDO PHP Extension
+pdo_mysql PHP Extension
+Tokenizer PHP Extension
+XML PHP Extension
+Filter PHP Extension
+Hash PHP Extension
+Session PHP Extension
+Zip PHP Extension
+allow_url_fopen()
+file_get_contents()
+Other Requirements
+Cron Jobs: Required for scheduled tasks
+SSL Certificate: Required for secure transactions (HTTPS)
+Max Upload Size: Adjust server settings to allow large file uploads (Recommended: 50MB or more)
+On this page
+
+Server Configuration
+PHP and Server Extension
+Other Requirements
+Installation
+Installation is very easy with our Easy Installer. You can install yourself simply in few steps without any coding knowledge. We develop our installation system to make the installation process flawless and easy.
+
+Installation Steps
+Upload the whole file to the server you have downloaded from download after purchase.
+Extract/Unzip the file and move all files in the laravel folder to the main folder(where you want to install it). Make sure you have moved the index.php and .htaccess as well.
+Now please browse http://your-site-url/install/index.php and follow the process. Your system should be ready to use.
+Installation Preview
+Follow these steps to install FansLab â€“ Code & Template Marketplace on your server
+
+img
+On this page
+
+Installation
+Installation Preview
+Activation
+After installing the system you need to activate it. When you visit the system, you will be able to see the activation page. Just provide this information to activate and run your system. Your provided information will send to ViserLab server to verify and we never collect any sensitive or confidential data.
+
+Purchase Code To get purchase code Click Here.
+Envato Username: Your Envato username with which you bought system.
+Email: Provide your email for further communication.
+Activation Preview
+img
+On this page
+
+Activation
+Activation Preview
+Frontend Installation & Socket Server Setup
+Our scripts are fully ready for cPanel hosting as well as VPS servers.
+We offer full support for cPanel, if your hosting environment includes Node.js support. Our script includes detailed documentation with video tutorials.
+
+Socket Server Setup
+Please follow the video to setup your socket server on cPanel hosting:
+
+[NOTE: if your hosting supports node.js by default socket should be there, if not please contact your hosting provider]
+
+
+cPanel Hosting
+In this section we will guide you through the process of setting up Next.js on cPanel hosting.
+
+Before you start, please make sure your cPanel hosting supports node.js
+Step 1:Login to your cPanel and click on Setup Node.js App
+
+Step 1
+Step 2: Click on Create Application button. (here you can see the list of all of your node.js applications)
+
+Step 2
+Step 3: Fill up the form as described below:
+
+Node.js Version: Leave it to recommended one but don't have minimum v18 or above.
+Application Mode: It should be production.
+Application Root: It is the place where your file will be stored in file manager.
+Application URL: The URL of the website. todo:
+Application startup file: server.js
+Step 3
+If you don't need any extra things like social media login, you leave the Environment variables as it is. Please click here for more information about environment variables.
+After filling the form and and adding needed environment variables(please click on the done button after adding variables), click on the Create button on the top right corner.
+
+Step 4: From the step 3, you as you created the application, now in the file manager you have to upload the built zip file as following and extract it in the folder:
+
+Image Image
+Step 5: After uploading the files on the appropriate folder, stop the server and click on Run NPM Install button. After a successful install, start your server again. Your application is live now.
+
+Image
+Note: each time you change environment variables you have to restart the server.
+On this page
+
+Setup Node.js App
+Create Application
+Fill Up Required Form
+Upload file in file manager
+Install and start the server
+Manual Build
+Prerequisites for manual build
+Follow the tutorial to install the following:
+
+
+Node.js : minimum v18.0.0 is required on your machine.
+NPM : node package manager.
+Code Editor: Any code editor you prefer to modify some files
+After purchasing the script from codecanyon you have the following folder structure. Copy the next folder from here to somewhere else, to building it or you can do it right here.
+
+Step 1. If you did not download the node.js yet, download it from here
+
+Step 2. Check node.js and npm version from terminal.
+
+
+Step 3. Now, open your project path in the terminal and run npm install as following
+
+
+Step 4. Open your project in any code editor and edit the .env file and the next.config.mjs file and update as following:
+
+
+Instructions for the .env file:
+1. NEXT_PUBLIC_AUTH_PREFIX: If you wish to run your website in some kind of subfolder, then put the subfolder name here, e.g. /frontend
+
+2. NEXT_PUBLIC_SITE_TITLE: Your website title
+
+3. NEXT_PUBLIC_API_URL: The url of your API where the backend is running(please put it without the trailing slash)
+
+4. NEXT_PUBLIC_SOCKET_SERVER: Socket server url(this is required for the live chat system)
+
+5. NEXT_PUBLIC_FIREBASE_API_KEY: Firebase API key
+
+6. NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: Firebase auth domain
+
+7. NEXT_PUBLIC_FIREBASE_PROJECT_ID: Firebase project id
+
+8. NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: Firebase storage bucket
+
+9. NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: Firebase message sender id
+
+10. NEXT_PUBLIC_FIREBASE_APP_ID: Firebase App ID
+
+11. NEXT_PUBLIC_FIREBASE_VAPID_KEY: Add the VAPID key you generated in Firebase Console
+
+
+Instructions for the next.config.mjs file:
+basePath: If you want to run your website inside a subfolder, specify the subfolder name here (e.g. /frontend). Otherwise, leave it empty('') or remove the key.
+
+domains: Enter your backend URL's domain here to allow images to load correctly. Make sure you just put the domain name without any protocol(https/http) (e.g. example.com).
+
+Env config file
+Step 5. After completing the above steps, now open your project in the terminal and run npm run build as following to build your project.
+
+Build
+Step 6. After building your project, please select the .next, package.json, next.config.mjs and server.js file and make a zip file and to deploy with cPanel, please go to cPanel Hosting section.
+
+Zip and upload
+On this page
+
+Prerequisites
+Download Node.js
+Check Version
+Install Packages
+File Configuration
+Build Project
+Zip file for deployment
+General Setting
+The General Settings page allows administrators to configure essential site-wide settings for the FansLab - Subscription Based Social Media Platform. Below are the available options.
+
+Site Title
+The Site Title is the name of your marketplace.
+It appears in the browser tab, emails, and various parts of the platform.
+Example: FansLab â€“ Subscription Based Social Media Platform
+Currency
+Set the default currency for transactions.
+Example: USD, EUR, GBP, INR
+Currency Symbol
+Define the symbol associated with the selected currency.
+Example: $ for USD, â‚¬ for EUR, â‚¹ for INR
+Timezone
+Set the default timezone for the system.
+This affects timestamps, order records, and user activities.
+Example: America/New_York, Asia/Dhaka
+Base Color
+Choose the primary color for the websiteâ€™s theme.
+This color is applied to buttons, links, and other UI elements.
+Records to Display Per Page
+Set the number of records displayed per page in lists such as products, orders, and users.
+Example: 20, 50, 100
+Currency Showing Format
+Define how the currency should be displayed across the site.
+Example formats:
+$100.00 (Show Currency Symbol Only)
+100.00 USD (Show Currency Text Only )
+$100.00 USD (Show Currency Text and Symbol Both )
+img
+On this page
+
+Site title
+Currency
+Currency Symbol
+Base Color
+Pagination
+Currency format
+Logo & Favicon
+The Logo & Favicon settings allow you to upload branding elements for your FansLab script. These assets help create a professional and recognizable identity for your platform.
+
+Logo
+Recommended Format: PNG with a transparent background
+Favicon
+The favicon is the small icon displayed in the browser tab.
+Recommended Size: 32x32px or 48x48px
+img
+On this page
+
+Logo & Favicon
+Preview
+System Configuration
+The System Configuration page allows administrators to manage essential settings for the backend functionality of FansLab â€“ Subscription Based Social Media Platform. These settings control various aspects of the system, such as Email Varification, Push Notification etc.
+
+img
+KYC Setting
+FansLab includes KYC (Know Your Customer) verification to ensure secure transactions and compliance with platform policies. This feature helps verify user identities before they can perform certain actions like withdrawals, selling products, or accessing restricted features.
+
+KYC Verification Process
+Submit Required Documents
+Admin Review & Approval
+Access Granted
+img
+Social Login Setting
+FansLab allows users to log in and interact using their social media accounts. The Social Settings section enables you to configure authentication and integration for popular platforms like Google, Facebook, and LinkedIn.
+
+Google Login
+Enable users to sign in using their Google account.
+Requires Google Client ID and Client Secret from the Google Developer Console.
+Facebook Login
+Allow users to log in via Facebook for a seamless experience.
+Requires Facebook App ID and App Secret from the Facebook Developer Portal.
+LinkedIn Login
+Users can log in using their LinkedIn credentials.
+Requires LinkedIn Client ID and Client Secret from the LinkedIn Developer Portal.
+img
+Notification Setting
+FansLab provides a flexible Notification Settings system to manage how users receive updates and alerts. You can configure different types of notifications based on your platformâ€™s needs.
+
+Global Template
+A predefined structure for all notifications.
+Ensures consistency across emails, SMS, and push notifications.
+Can be customized with dynamic placeholders for user-specific details.
+img
+Email Setting
+Configure email notifications for user activities, purchases, updates, and promotions.
+Requires SMTP setup or third-party email services (e.g., Mailjet, SendGrid).
+Allows enabling/disabling email notifications for specific events.
+img
+SMS Setting
+Send important notifications via SMS for order updates or alerts.
+Requires integration with an SMS gateway (e.g., Twilio, Nexmo, Clickatell, Infobip, Message Bird, SMS Broadcast, Text Magic, Custom API).
+Enable/disable SMS notifications based on preference.
+img
+Push Notification Setting
+Enable real-time notifications for user actions and system updates.
+Requires integration with push notification services (e.g., Firebase).
+Helps keep users engaged with instant alerts.
+img
+Notification Templates
+Predefined templates for emails, SMS, and push notifications.
+Can be customized to match branding and user preferences.
+Supports placeholders for dynamic content (e.g., {user_name}, {order_id}).
+img
+On this page
+
+Global Template
+Email Setting
+SMS Setting
+Push Notification Setting
+Notification Template
+Payment Gateways
+FansLab supports two types of payment gateways to process transactions securely: Automatic Payment Gateways and Manual Payment Gateways.
+
+Automatic Payment Gateway
+Payments are processed instantly through third-party payment providers.
+Requires API integration with supported payment services.
+Transactions are completed automatically without manual verification.
+Example: Aamarpay, Authorize.net, BTCPay, Binance, Blockchain, Cashmaal, Checkout, Coinbase Commerce, Coingate, CoinPayments, CoinPayments Fiat, Flutterwave, Instamojo, Mercado Pago, Mollie, NMI, Now payments checkout, Now payments hosted, Payeer, Paypal, Paypal Express, PayStack, PayTM, Perfect Money, RazorPay, Skrill, SslCommerz, Stripe Hosted, Stripe Storefront, Stripe Checkout, 2Checkout
+img
+Manual Payment Gateways
+Payments are processed manually after verification.
+Users submit payment details (e.g., bank transfer, offline payments).
+Admin must verify and approve the transaction before confirming the order.
+Example: Bank Transfer, Cash Payment, Cryptocurrency Transfer.
+img
+On this page
+
+Automatic Gateways
+Manual Gateways
+How to Setup Payment Gateways
+The main problem of online business is accepting the payments. And we tried our level best to solve this problem. We have added 20+ Automated online payments gateways! YES, 30+ gateways. You can control all of them from the admin panel and you do not need any coding knowledge for that. Additionally, you can set manual gateways as well.
+
+How to setup automatic gateway
+Step 1: Enable a gateway that you want
+Step 2: Click the edit button and go to the edit page of this gateway.
+Step 3: Provide required credentials.
+Step 4: Select a currency and click add new option. This select box is shown at the top of the page
+Step 5: Provide currency title minimum and maximum deposit range, fixed and percentage charge, and rate to your site currency.
+Step 6: Click the submit button and your gateway is ready to receive payments if everything is ok.
+img
+How to setup manual gateway
+Step 1: Click the "Add New" button. Now you'll be able to see a form to setup this gateway
+Step 2: Provide basic required information.
+Step 3: Provide instruction to users. This instruction will show to users. This instruction is referrers that how to send the money.
+Step 4: Set some user data that you want. This is the proof of payment. After sending the payment you've to confirm that. So that you need payment proof. That's why you need to set up this section.
+img
+On this page
+
+Setup Automatic Gateways
+Setup Manual Gateways
+Withdrawal Methods
+FansLab provides multiple withdrawal methods for sellers to securely withdraw their earnings. Users can choose a preferred method based on availability and convenience.
+
+Withdrawal Process
+Step 1: Choose a preferred withdrawal method.
+Step 2: Enter the required details.
+Step 3: Submit a withdrawal request.
+Step 4: The admin reviews and processes the request (if manual approval is required).
+How to setup withdraw method
+Step 1: Click the "Add New" button. Now you'll be able to see a form to setup this method
+Step 2: Provide basic required information.
+Step 3: Provide instruction to users. This instruction will show to users. This instruction is referrers that how to make request for withdrawal.
+Step 4: Set some user data that you want. This is the proof of payment. After submitting the request you've to confirm that. So that you need a proof. That's why you need to set up this section.
+img
+On this page
+
+Setup Withdraw Process
+Setup Withdraw Method
+SEO Configuration
+SEO now becomes a very important part of any website, and that is why we have added a simple but powerful SEO manager tool in the admin panel. Now you can set your SEO keywords, meta tag, and OG image from your admin panel without paying anyone. SEO setting is just one-click away.
+
+SEO Image: This image will show when you'll share the site link anywhere.
+Meta Keywords: Put here some keywords related to your site. This will help to rank your site to search engines.
+Meta Description: This description will show in search engines. Also, related descriptions will help to rank your website in search engines.
+Social Title: This description will show below the title when sharing the link to social media.
+img
+Language
+Nowadays, many website owners want to localize their websites. They want to set many languages so users can choose and see the website in their mother language. But they can not set as many other software providers don't give that option Built-in and they charge a high amount of money to set that, In our product, you need not to pay any single penny for that. we include a unique language manager where you can easily set any language within a very short time.
+
+img
+Extension
+It is a unique feature for you. We have added all the important and required plugins in our admin panel. You will have full control over these plugins and you can configure them as you want.
+
+Google Recaptcha 2: Google Recaptcha 2 is used for protect robotic request to your system. To get google recaptcha 2 credentials Click Here
+Tawk.to: Tawk.to is third party live chat platform. You can enable this extension by providing api key from tawk.to
+Custom Captcha: This extension also protect robotic attack to your system. This is not third party extension. This is internal extension of our system
+Google Analytics: This extension is used to track your visitors. Overview of your web page and visitors are tracked by google analytics. To get credentials of google analytics, Click Here
+Facebook Comment: Facebook comment is used to manage blog's comments of our system. If you enable this, a facebook comment box will be shown in blog page. To get credentials of facebook comment, Click Here
+img
